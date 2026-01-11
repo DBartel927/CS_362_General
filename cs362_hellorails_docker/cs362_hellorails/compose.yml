@@ -1,0 +1,17 @@
+services:
+  cs362-hellorails:
+    container_name: cs362-hellorails
+    build: .
+
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - hellorails_volume:/home/user
+      - ./store:/home/user/store
+
+    stdin_open: true
+    tty: true
+
+volumes:
+  hellorails_volume: {}
