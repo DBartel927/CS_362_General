@@ -30,3 +30,11 @@ class IndyTest < Minitest::Test
         assert_equal 1, Counter.count
     end
 end
+
+# Why did the original test code fail half the time and not all the time?
+
+# Because the tests were not independent; the state of the Counter class persisted between tests, causing interference.
+
+# If you had to write a proverb that described the basics of what to do to make sure your tests are independent, what would that proverb be?
+
+# "Always reset the world before testing."
